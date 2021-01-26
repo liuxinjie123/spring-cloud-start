@@ -1,4 +1,4 @@
-package com.eureka.consumer;
+package com.consul.consumer;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -8,13 +8,13 @@ import org.springframework.web.client.RestTemplate;
 
 @EnableDiscoveryClient
 @SpringBootApplication
-public class EurekaConsumerApplication {
+public class ConsulConsumerApplication {
     @Bean
     public RestTemplate restTemplate() {
         return new RestTemplate();
     }
 
     public static void main(String[] args) {
-        new SpringApplicationBuilder(EurekaConsumerApplication.class).web(true).run(args);
+        new SpringApplicationBuilder(ConsulConsumerApplication.class).web(true).run(args);
     }
 }
